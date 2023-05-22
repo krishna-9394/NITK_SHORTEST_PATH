@@ -4,6 +4,7 @@ class Edges {
     int distance;
     Node source,destination;
     ArrayList<Vehicle> allowedVehicles;
+    String instructions;
     String landmarks;
 
     public Edges(int distance, Node source, Node destination) {
@@ -55,6 +56,26 @@ class Edges {
 
     public void setLandmarks(String landmarks) {
         this.landmarks = landmarks;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
+    }
+
+    @Override
+    public String toString() {
+        return "Edges{" +
+                "distance=" + distance +
+                ", source=" + source +
+                ", destination=" + destination +
+                ", allowedVehicles=" + allowedVehicles +
+                ", instructions='" + instructions + '\'' +
+                ", landmarks='" + landmarks + '\'' +
+                '}';
     }
 }
 enum Vehicle {
